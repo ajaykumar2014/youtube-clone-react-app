@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:3000/home -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#6e6e6e">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="http://localhost:3000/manifest.json">
+  <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Customer Lens</title>
+  <link rel="stylesheet" href="./Customer Lens_files/css">
+  <link rel="stylesheet" href="./Customer Lens_files/icon">
+  <link rel="stylesheet" href="./Customer Lens_files/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous"> -->
+<style type="text/css">@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url(/static/media/AvenirNextLTPro-Regular.955d8f91.otf); }
+
+.footer-container {
+  grid-area: footer;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  z-index: 999; }
+  .footer-container .footerText {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    display: flex;
+    margin: auto; }
+  .footer-container .footerButton {
+    height: 40px;
+    border: 1px solid #00864f;
+    background-color: white;
+    color: #00864f;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    margin-left: 10px; }
+
+.copyright-text {
+  height: 19px;
+  color: #575757;
+  font-size: 14px;
+  line-height: 19px;
+  margin: 15px auto; }
+
+.footer-cta {
+  display: flex;
+  width: 25%; }
+
+.header-wrapper {
+  grid-area: header;
+  display: flex;
+  width: 100%;
+  padding: 0px 20px 0;
+  z-index: 1;
+  background-color: white;
+  box-shadow: #ddd 0px 1px 8px 0px;
+  height: 70px;
+  position: fixed; }
+  .header-wrapper .user-name {
+    height: auto;
+    max-height: 20px;
+    padding: 8px 12px;
+    text-transform: capitalize; }
+  .header-wrapper .brand-name {
+    display: flex;
+    border-right: 1px solid #6c6c6c;
+    padding-right: 10px; }
+    .header-wrapper .brand-name p {
+      color: #6c6c6c;
+      font-size: 22px;
+      margin: 25px 25px 0px 10px; }
+    .header-wrapper .brand-name sup {
+      font-size: 10px;
+      top: -1em; }
+
+.header-brand {
+  display: flex;
+  width: 70%; }
+  .header-brand img {
+    vertical-align: inherit !important;
+    padding: 10px;
+    height: 50px; }
+  .header-brand a {
+    cursor: pointer;
+    text-decoration: none; }
+
+html {
+  height: 100%;
+  box-sizing: border-box; }
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'header' 'container' 'footer';
+  grid-gap: 20px;
+  height: 100vh; }
+
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  display: block; }
+
+body {
+  margin: 0;
+  position: relative;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Avenir Next LT Pro";
+  background-color: gray; }
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit; }
+
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='email'],
+input[type='textarea'] {
+  font-size: 15px;
+  width: 100%;
+  outline: none; }
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+</style><style type="text/css">.container {
+  grid-area: container;
+  width: 100%; }
+</style><style type="text/css">@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: './fonts/AvenirNextLTPro-Regular.otf'; }
+
+.button_primary {
+  background: #00864f;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+  font-family: 'Avenir Next LT Pro';
+  font-size: 14px;
+  height: 40px;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 16px;
+  white-space: nowrap; }
+  .button_primary:disabled {
+    background-color: #d1d1d1;
+    cursor: default; }
+    .button_primary:disabled:hover {
+      background-color: #d1d1d1; }
+  .button_primary:focus {
+    border: 1px solid #5093f1; }
+  .button_primary:hover {
+    background-color: #006d40; }
+</style><style type="text/css">@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: './fonts/AvenirNextLTPro-Regular.otf'; }
+
+.date_entry {
+  position: relative; }
+  .date_entry .input_field__text {
+    border-radius: 0px;
+    border: 1px solid #00864f;
+    box-sizing: border-box;
+    font-family: "Avenir Next LT Pro";
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+    position: relative; }
+    .date_entry .input_field__text:disabled {
+      background: #ebebeb;
+      color: #999; }
+  .date_entry .error {
+    border: 1px solid #fe414d;
+    background-color: #ffd2d2a1; }
+  .date_entry .info {
+    border: 1px solid #00864f;
+    background-color: #cefacc; }
+</style><style type="text/css">.text_validation_error {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  color: #f36868;
+  text-align: left;
+  margin-top: 5px; }
+  .text_validation_error span {
+    padding: 1px; }
+  .text_validation_error sup {
+    font-weight: bolder;
+    font-size: larger; }
+</style><style type="text/css">.box-wrapper .flex-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .box-wrapper .flex-box p {
+    margin: 0px; }
+</style><style type="text/css">.search_container {
+  position: relative;
+  padding: 0;
+  text-align: center; }
+  .search_container .search_box {
+    box-sizing: border-box; }
+  .search_container .search_box_result {
+    position: relative; }
+    .search_container .search_box_result > ul {
+      list-style: none;
+      text-decoration: none;
+      padding: 0px;
+      border: none;
+      width: 99.2%;
+      background-color: white;
+      position: absolute;
+      border: 1px solid #dcd3d3;
+      z-index: 1;
+      margin-top: 1px;
+      right: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      max-height: 300px;
+      box-shadow: 7px 9px 9px 2px rgba(0, 0, 0, 0.19);
+      height: 250px; }
+      .search_container .search_box_result > ul li {
+        padding: 5px 10px;
+        margin-top: 2px;
+        text-align: left;
+        font-size: small; }
+        .search_container .search_box_result > ul li:hover {
+          color: white;
+          background-color: lightgray;
+          cursor: pointer; }
+          .search_container .search_box_result > ul li:hover .sub_menu,
+          .search_container .search_box_result > ul li:hover ul {
+            display: block;
+            position: absolute;
+            margin-left: -15; }
+        .search_container .search_box_result > ul li:hover .sub_menu,
+        .search_container .search_box_result > ul li ul {
+          display: block; }
+        .search_container .search_box_result > ul li:hover .sub_menu,
+        .search_container .search_box_result > ul li ul li {
+          background-color: white;
+          color: black; }
+        .search_container .search_box_result > ul li .sub_menu,
+        .search_container .search_box_result > ul li ul {
+          display: none; }
+        .search_container .search_box_result > ul li .sub_menu {
+          position: absolute;
+          width: 50%;
+          top: 0;
+          right: 0px; }
+        .search_container .search_box_result > ul li .sub_menu ul {
+          list-style: none;
+          text-decoration: none;
+          width: 100%;
+          overflow: hidden;
+          overflow-y: scroll;
+          padding-inline-start: 0px;
+          border-left: 1px solid #dcd3d3; }
+        .search_container .search_box_result > ul li .sub_menu ul li {
+          padding: 10px;
+          /* margin-top: 2px; */
+          text-align: left;
+          font-size: small;
+          border-bottom: 1px solid #dcd3d3;
+          color: black; }
+        .search_container .search_box_result > ul li .sub_menu ul li a {
+          text-decoration: underline; }
+        .search_container .search_box_result > ul li .sub_menu ul li a:hover {
+          font-weight: bolder; }
+        .search_container .search_box_result > ul li .sub_menu ul li:last-child {
+          border-bottom: none; }
+</style><style type="text/css">@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: './fonts/AvenirNextLTPro-Regular.otf'; }
+
+.inner-container {
+  width: 30%;
+  margin-top: 100px;
+  box-shadow: 0 0 0 rgba(31, 31, 31, 0.8);
+  margin: 0 auto;
+  border: 1px #b4b4b4 solid;
+  padding: 40px;
+  background-color: white; }
+  .inner-container .outer-box {
+    display: flex;
+    flex-direction: column; }
+    .inner-container .outer-box .box-header-title {
+      text-align: center; }
+      .inner-container .outer-box .box-header-title h1 {
+        font-size: 40px;
+        line-height: 34px;
+        color: #00864f;
+        margin-bottom: 10px;
+        clear: both; }
+      .inner-container .outer-box .box-header-title h3 {
+        font-size: 18px;
+        line-height: 28px;
+        color: #00864f;
+        font-weight: 300; }
+    .inner-container .outer-box .box-body {
+      margin: 0 auto; }
+
+.form_input_field {
+  margin: 15px 30px 15px 30px; }
+  .form_input_field .inline_field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .form_input_field .inline_field .col_3 {
+      width: 33%; }
+    .form_input_field .inline_field .col_6 {
+      width: 62%; }
+</style><style type="text/css">.landing___container {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  margin: 10px;
+  justify-content: space-around; }
+  .landing___container .landing__header_section {
+    width: 100;
+    padding: 5px;
+    display: flex;
+    flex: 1 1;
+    background-color: white;
+    margin: 10px 0 10px 0; }
+  .landing___container .landing__main_section {
+    display: flex;
+    flex: 1 1; }
+    .landing___container .landing__main_section .landing__left {
+      flex: 0.4 1;
+      background-color: white; }
+    .landing___container .landing__main_section .landing__centre {
+      flex: 0.4 1;
+      margin: 0 10px;
+      background-color: white; }
+    .landing___container .landing__main_section .landing__right {
+      flex: 0.2 1;
+      background-color: white; }
+
+.panel {
+  border: 1 solid white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: small; }
+  .panel .title {
+    padding: 5px; }
+    .panel .title .label {
+      font-weight: 700;
+      flex: 0.1 1;
+      text-align: center; }
+    .panel .title .val {
+      text-align: center; }
+  .panel .box {
+    flex: 0.9 1; }
+</style><script charset="utf-8" src="./Customer Lens_files/main.64ad2a0eef11e9d3e803.hot-update.js"></script></head>
+
+<body data-gr-c-s-loaded="true">
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"><header class="header-wrapper"><div class="header-brand"><div class="brand-name"><a href="http://localhost:3000/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAABoCAMAAACt327QAAAAgVBMVEX///8jHyAKgTer1LspkVBlYmNBPj9eW1snIySYlpc7ODjh4OCBf3/x8fGPjY2enZ1PTE2npabR0NEqJidJRkb5+fnCwcHT0tLp6elqZ2gvKyxRTk6qqKjc29uysbE1MTJ9enu8urtyb3BYVVaRj4+HhYXAv79lsIJ5upLL5NViXmCY00/yAAAMeUlEQVR4nO2ce2OqOhLAye4CAURAnoIKivbe9ft/wJ3JiwShRY+3td3OH6fykvySybwSj2X9yq/8yufLIUn26iBPkqQyLofH8+p8CPnVXZIc5IU93Bqwf5PkuMm1R/Ii8pIit15AHEISdRASQjbaxXCVEhTaMeQLfHwTlxpCnNyKCJd0q3po17IztfcpzX9f3oPb+ERKi6dzhxGh7DhnpG6gZ/6MOmN/IsScvANX1ki1XZ1wLFI8X8CHC7ux5a0HlNp1GzZYHbsAQ+2vvEtPXxsOx4mecaByj0KTceJ1cAoVEBQ0DSwGF+O9R7iX7ODDAbqDzdCq+EyKGZmH80R7UaDNZG3xEevBmgAsU0MJZ4UZUEFHJIQ0n9f4j2QeDq5c1ZUtDB3+PRK835VzT8FZG7hw4Iq7Cj+n6R/LLFwAn4/qCja6xA9A2cLwEK51A5yVsVmXZzg/T6+gk9Y7cIhTGVcYasUt/Zaf1uBOhLjwZ++w687QL18o78IN+pVzrbO4EyC1wNbgOjYb0TfWDO/yzFbu1g89NgtXGm5hPxzBhCPSQ2twrhrOfIe3kOepZlgd6RYmxd1zeRYur/XeP8NMEkFYpjy5DleBg4vU7RtQ3tO9TZmVYw2Wmx5y2q+Tt3viunlrCZOoDsTnqlUhR6QPygAHd9NAfRH6kee5hLxnih7z2bz/+AEp83DozBze3gBGizJjaVW1Uj9rgMs7EaJUwjOuuHl5kuyJJm1p7auPn0EBuK3HJWdwHT9IuBdPV0VZXGrhwy0+nsNXA5yfJFGHJjRDtQ2Ivy6Cck2HefkE2VBfo6NxvVoMJ4XDCXEs1v1KOn57QYxWD4EziRlyMHzB81x5Hrs2MWThfH4PTqYv6LfFa0A/M21KK7h6zc9W8vuy4OZVD8ulsV3xmtih+Hf38UMoJ1cJwA0HvG/CxHZa55rIUSjgim7ij+ze7eowDFOx6h3H3j0xWQ1b27ZlNzsufnpiz32xhKltX3tJ59sw/5zDS2T6T5Cgtft0mDCZjfbN33z84HcQu7drzZikNnN7dVJ+dcOeIBvfzgxTGdvcMZy/umVPkFNvpwacL4ZuoSd/ZQFbGZtOrrZtStLtT7CYXmw7N3Atrwt8d6l84eMyW4PzZXb5wcMBSmW6jbIshxNwVX7MxWf4G+TyDJ4KhwvKnYfag3C0L8pHJknX+g7AUQiRagOuXuALVLjkDTgYhKsAMhQ1S5RClIkwguQtXfFYSCYBG4jU5FyIhsQgjxoWNflDArJUIFBvM1JjWCSDZ5/BqTLwAjhoiaLDFjsaHPGrGTgsFa0tA47E+RiuUDH9wmheEyz7pqx8k1Plxbkv6JbAtY7DtFom0iEbfxlCsmC6zyfhCiqSOx1OhuwK7sBaVeNL7ocLsffTnL+cS2+jU3cWaIHDQ2xMR2XqDMNBh1o/zxS6Kbg9vKPJb+BEL0m4MsWVFMyf8+KBukqVnHr22GmYcuAKeDVqGRwWtaR1BbeCNYtKh+PpugmHneqrqafB0UKHA4+bPqFYVGlayRKgBeUGCXdWfYFGAasW5wEOvoxuxnB4Ty3iOx3OFUZFwO2JXjl6XGTmTK829+oLMn2AW5flJkqV5zhh1QsHMldwZcPHyIDDkpAsvepwmK9iQivgQAnqJ+QnG23guD1ZkI0P1lIUSXARas8Ke0cFt698Nrt0uE4fER0ux0l2UnCdUomwMOdcWOwOS0tZuYydccaxJMFe4MU1V8Ddb8Qb00lbx+BYx3UGHJGLVTdwbE3Ik3BbVS0rYaiHFwfb1Acznb1ZCySX4UnqAhvGzemSx1CHXNfFjrnKE1fP89A2BQMc82iJDrfWXaMJh4e0uBk5A+6YOlcchL5dMHdyaSlpj8+wAVmSrGrWksjFUykXDY5VXdf6nLtoej+CQ1vTinPASMMbuILi3GHyMV3Vyxbxh1JlkRfCYXCDU2irweFqooLLG+b+NFewHSbqCM7COUr5uUDdpcHlPiRlbdpgU136wexJaiITOvZAv9BWDnBoQSLuTS68LEu5/ZRwYvFKg2NV7t0knLVhzWHnbGlVNbiIuj3kZNfYh7g4Td9TsSImaazKDL4rjKUNoXhZFofovJsvkAJcFIbhxuVqeR6iSptPFgXHgi0jQkEvTt8m4fhKFzsXYMu60oCL2yvQt6osKo1mePQuFy8pZP6QH3oE0uvNOFXxuFVn6tmR1xLBBtVlGPAjpxrgWAnWiC33rfDjt3BoSIS9Ldgo1n6t4ELq6+2FlrL2Ha/YfTwSbexTd4Jcgvr9KFlN+6GKyYXO1WiHB52KAVHVay0LKTU4NCpmVoDt9oNJOFRakRWU6iUCzljY4OLuip6kToxqd+3jzG9rmtZOfBVzTGfpx6fojD/h76Wtm2CjXH0JB8xhHRpweTzO59ClZeEUHBoVlc/tXDZ6WcePN0O7Mk9VfwYDaope1+Njdx2fe3fW/vOSB2WgorBS4pA4TGQDW5ez9LHjg3uPr4JtPHBEVJ1RmmNl7dEJtnes2v3DIhdcDteNtWoTsCI+aRmJ6wxlPIfDOTdsoCYMzhdz7a3mk+pFRDQYPUSFfV5SFjNeDTPDcUdFS8EN9iBOBk3Aw5fZ/bLmbezkcY/ptbEioNimBg70ub5460t32q6YPm5g7PpXoau4QZApU4FFn1HRnKRZ02T+1LgZwtft0Wz3r7LyI1YtU07X4cBNDtEC4fUQNNsvM3YihqUsJczozbjdIdxQos10XqTErjI0rGbU7ZTB/1iog+rNS2qsxtI+VqzJn67QwqiAyczBeLTvMMxIvYYQo2GRBsoRw9XbXVnBufdpm51YEJPETGxvcBwQYEAP+Z0KAy5xLCLQXRyzkGbLHuq7eyKFA7cqDri99n6lpBfGFPpDtQMLuI5ZWgk7WXvZ6h06BNuFmuq2mLFbVV71IIDCv+qW0x0jzPMiSPhlA+4QW4YkG8pbYPFqge3r+wWrodNMOF7Ng8HRXi1m7DtwpFsOZ/ENGIVlpggLpNHmVqeq41joiX1tgx8rK/neJijfzmcB10AWuJZFZ8ziaFdUwQHUm28TmoZbF28RMi6P8nIOtbGud5FR20gCAqp29JZd03RaHIYDZajSWgT4kLbWFt/GXYuewarJZRYOtRid8+JtUaI00uYs91simXeIVt44irTFJt7bzqv1ncw63JGw7AUzapXpbsXGxFk4VLRuIdsbN5BYQVndYFD/JtGp56zVQc/TdEEEE1vCXXhiaut7CwNBOg+XLd4iW/Cp7KBWxGMQLKvlVbFbn66NA1b4dEk2s5YqpHJL4Ug8Ml5dBri4KI4XysfAN/RMtH0OLl+TZeu5IDjP0u0Rm/x2q4B37TEZcn5TVmpgKsL3NA/WskXlpsYusisvVU7COXGGpt1Z6AsaVeMOb43lfXs1wTxMbjpeE+klbuAyZvZaY42m58P5jitYslQtWyT87faGjd6XVwe+ojAkUfVgDa51G6UZsb6ckqdcSWfhqL04dM3XGYsJ8glTee8CLLZ9YqEVTUQ0hrMZE1cNOEyV7cVERZTWhX2Sag1wq8OhuD/nqCYi5uzeOLbAGujEu9UKogmHSwYsjgnokAXiMjFb1DjLFR4MAU4CbqEhGbEN8y09i1DIvztxAZPuthPFyxK+scatnyYc3s9NA3ruhuHvahmSYWkOdYqp1OFP4JRO+pdKGM0HkrKG1LbTTVxgpbXW7mwTTv3Qiu97z+wr87lCs/HmumebVvlMfhSOR5fNrpRGkz7yM6e9Q5120pHvhlhAg8M+5fvi8sGapXLoQxVtCx16FI6lrB37yF4TP1Z/zKOMTod9QSeqMK0Oh2GisJNHHkGkp0FhxK9Z6UkYmz9RS2652Gotfbz6OGuE8iLxkqP4gURRcCdQakvYwSEa/4A4PEbRQbVlUxQPtQu9Kn8LWz+Y8lbfV3DdVWyRwwn8IzYaKkkGoCMl9ySD30AiLemIyH15/MtLNFozm85dvqmcjUDSfSD0emFZGeki+vHuq5ryfDmZPzra0Af95UuKq/9e22IpVPs6y4h/KPEIDrOU6WrPN5R2rIZBPcb9thKSm52mO/F/XHx/YYnh6Fz2zF9hf6Vgnj/OBDBR+Ak/sILYEugaUwuPmB7cs1j0uoJr2Y5ZDmT/c4zzIv8xx59JT2onNe0jKCvN0kX7g19cToTaTm1qJtgUN2t/gGZC6Oz7I2fX4W9w7lsveE0Jvcvlsq5uz3k/YOR+5VH5+z/fVRbA/fWv7yr/73D//fd3lQVwv/Irv/JJ8j9y/MlfBXJMGAAAAABJRU5ErkJggg==" alt="Lloyds Personal Banking" height="42"></a></div></div></header><div class="container"><div class="landing___container"><div class="landing__header_section">search box</div><div class="landing__main_section"><div class="landing__left"><div class="panel"><div class="title"><span class="label">Lending Group</span><span>Evan Outdoors</span></div><div class="box"><div class="inner-box"><div class="name">Name</div><div class="name">Bobs Bikes&gt;</div><div class="name">Hard Limits&gt;</div><div class="name">Soft Limits&gt;</div><div class="name">lending/ Value&gt;</div><div class="name">Risk Rating</div><div class="name">Cotsworld Cloth..</div><div class="name">Cotsworld Cloth..</div><div class="name">Swim UK</div></div></div></div></div><div class="landing__centre">center</div><div class="landing__right">right</div></div></div></div><div class="footer-container"><p class="copyright-text"> © 2020, Lloyds Banking Group</p></div></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+<script src="./Customer Lens_files/bundle.js"></script><script src="./Customer Lens_files/0.chunk.js"></script><script src="./Customer Lens_files/main.chunk.js"></script><script src="./Customer Lens_files/main.9937d40e6d4a027b5563.hot-update.js"></script>
+
+</body></html>

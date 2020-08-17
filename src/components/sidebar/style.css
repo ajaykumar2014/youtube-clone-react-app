@@ -1,0 +1,33 @@
+.left__sidebar {
+  flex: 0.15;
+  padding: 0 16px;
+  padding: 12px 0;
+}
+.left__sidebar > hr {
+  color: #eeee;
+  margin: 10px 5px;
+  border: 0.5px solid;
+}
+.side__bar_row {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  line-height: 24px;
+  /* padding: 0 24px; */
+}
+.row__icon {
+  color: #606060;
+  font-size: large !important;
+  width: 30px;
+}
+.row__title {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.side__bar_row:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
