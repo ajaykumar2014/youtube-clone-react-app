@@ -1,31 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './style.css';
 import VideoCard from './VideoCard';
-import videos from './data/video-img.json';
-import title from './data/title.json';
-import faker from 'faker';
-
-// document.querySelectorAll('a#video-title.yt-simple-endpoint.style-scope.ytd-grid-video-renderer').forEach(e=>console.log(e.title))
-
-const youtubeVideosJson = () => {
-  videos.map((img, index) =>
-    console.log('videos', img, index, title[index], faker.company.companyName())
-  );
-
-  return videos.map((img, index) => ({
-    id: faker.random.uuid(),
-    image: img,
-    title: title[index],
-    channel: faker.company.companyName(),
-    view: faker.random.number() + 'K ',
-  }));
-};
-
-export const RecommendedVideos = () => {
-  const [data, setData] = useState();
-  useEffect(() => {
-    setData(youtubeVideosJson());
-  }, []);
+import me from '../../me.jpg';
+export const RecommendedVideos = ({ data }) => {
   //youtubeVideosJson();
   return (
     <div className="right-section">
@@ -39,6 +16,8 @@ export const RecommendedVideos = () => {
                 title={d.title}
                 channel={d.channel}
                 view={d.view}
+                authorImg={me}
+                authorName="Ajay Kumar Gupta"
               ></VideoCard>
             );
           })}
