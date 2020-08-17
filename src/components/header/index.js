@@ -9,11 +9,11 @@ import SearchIcon from '@material-ui/icons/Search';
 import logo from '../../logo.png';
 import me from '../../me.jpg';
 
-const Header = ({ onSearchEvent }) => {
+const Header = ({ onSearchEvent, onToggleEvent }) => {
   return (
     <div className="header__app">
       <div className="header__left">
-        <MenuIcon />
+        <MenuIcon onClick={onToggleEvent} />
         <img src={logo} alt="YouTube" className="header__logo" />
       </div>
       <div className="header__input">

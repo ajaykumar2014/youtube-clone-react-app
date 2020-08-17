@@ -27,9 +27,14 @@ const youtubeVideos = youtubeVideosJson();
 function App() {
   const [query, setQuery] = useState('');
   const [data, setData] = useState(youtubeVideos);
+  const [toggle, setToggle] = useState(false);
   const onSeachHandler = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
+  };
+
+  const onToggleClick = () => {
+    setToggle((toggle) => !toggle);
   };
 
   useEffect(() => {
@@ -46,10 +51,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header onSearchEvent={onSeachHandler}></Header>
+      <Header
+        onSearchEvent={onSeachHandler}
+        onToggleEvent={onToggleClick}
+      ></Header>
       <div className="app___page">
-        <SideBar></SideBar>
-        <RecommendedVideos data={data} />
+        <SideBar toggle={toggle} />
+        <RecommendedVideos data={data} toggle={toggle} />
       </div>
     </div>
   );

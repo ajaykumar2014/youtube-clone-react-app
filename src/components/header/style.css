@@ -22,9 +22,12 @@
 .header__app .header__left {
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
+.header__left:hover {
+  cursor: pointer;
+}
 .header__app .header__right {
   display: flex;
   align-items: center;

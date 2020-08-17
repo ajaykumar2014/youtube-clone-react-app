@@ -1,6 +1,6 @@
 .right-section {
   display: flex;
-  flex: 0.85;
+  flex: auto;
   background-color: #f9f9f9;
   padding: 40px 20px;
   flex-direction: column;
@@ -18,9 +18,13 @@
 }
 
 .video__card {
-  width: 300px;
   margin-bottom: 40px;
   margin-right: 25px;
+  width: 330px;
+}
+.video__card > img {
+  width: auto;
+  height: auto;
 }
 
 .card_info {
@@ -36,9 +40,9 @@
   width: 240px;
   height: 140px; */
 
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 0px;
-  width: 240px;
+  width: 330px;
   /* height: 140px; */
   display: block;
   /* position: absolute; */
