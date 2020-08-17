@@ -4,6 +4,7 @@ import Header from './components/header';
 import SideBar from './components/sidebar/index';
 import { RecommendedVideos } from './components/videoJs';
 import videos from './data/video-img.json';
+
 import title from './data/title.json';
 import faker from 'faker';
 // document.querySelectorAll('a#video-title.yt-simple-endpoint.style-scope.ytd-grid-video-renderer').forEach(e=>console.log(e.title))
